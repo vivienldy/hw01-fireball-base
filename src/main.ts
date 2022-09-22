@@ -22,6 +22,8 @@ const controls = {
   reset: reset,
 };
 
+const three = require("three")
+
 let icosphere: Icosphere;
 let square: Square;
 let cube: Cube;
@@ -98,11 +100,11 @@ function main() {
   gl.enable(gl.DEPTH_TEST);
 
   // ---- load texture
-  const gradientTexture = loadTexture('../texture/gradient.png');
+  const gradientTexture = loadTexture('./texture/gradient.png');
   gl.activeTexture(gl.TEXTURE0);
   gl.bindTexture(gl.TEXTURE_2D, gradientTexture);
 
-  const gradientTexture2 = loadTexture('../texture/gradient2.png');
+  const gradientTexture2 = loadTexture('./texture/gradient2.png');
   gl.activeTexture(gl.TEXTURE1);
   gl.bindTexture(gl.TEXTURE_2D, gradientTexture2);
 
@@ -123,8 +125,29 @@ function main() {
   // ========= audio
   // const play = require('audio-play');
   // const load = require('audio-loader');
-  
-  //load('./music/running_up_the_hill.mp3').then(play);
+  // load('./music/running_up_the_hill.mp3').then(play);
+
+  // var listener = new three.AudioListener();
+  // var sound = new three.Audio(listener);
+  // var audioLoader = new three.AudioLoader();
+
+  // //Load a sound and set it as the Audio object's buffer
+  // audioLoader.load('./src/misc/music.mp3', function( buffer ) {
+  //   sound.setBuffer( buffer );
+  //   sound.setLoop(true);
+  //   sound.setVolume(1.0);
+
+  //   if(UserInput.enableSound)
+  //     sound.play();
+
+  //   // Initialize the Engine ONLY when the sound is loaded
+  //   Engine.initialized = true;
+  // });
+
+  // Engine.audioAnalyser = new THREE.AudioAnalyser( sound, 64 );
+
+
+
 
 
   // This function will be called every frame

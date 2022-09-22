@@ -19,6 +19,7 @@
     "audio-play": "^2.3.1",
     "dat.gui": "^0.7.7",
     "gl-matrix": "^3.3.0",
-    "stats-js": "^1.0.1"
+    "stats-js": "^1.0.1",
+    "three": "^0.144.0"
   }
 }
