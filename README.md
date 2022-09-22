@@ -5,7 +5,7 @@
 Get comfortable with using WebGL and its shaders to generate an interesting 3D, continuous surface using a multi-octave noise algorithm.
 
 ## Demo
-![Demo](scr/result.gif)
+![Demo](src/result.gif)
 
 I used two noise to deform the shpere. 3D perlin noise for the low-frequency, high-amplitude deformation, and a higher-frequency, lower-amplitude 3D fbm noise to add details for the fireball. 
 I used the 3D fbm noise as the texture coordinate to sample from a gradient texture to the the fireball a melting lava look. 
