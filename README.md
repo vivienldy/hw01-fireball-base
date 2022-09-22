@@ -4,6 +4,17 @@
 
 Get comfortable with using WebGL and its shaders to generate an interesting 3D, continuous surface using a multi-octave noise algorithm.
 
+## Demo
+![Demo](scr/result.gif)
+
+I used two noise to deform the shpere. 3D perlin noise for the low-frequency, high-amplitude deformation, and a higher-frequency, lower-amplitude 3D fbm noise to add details for the fireball. 
+I used the 3D fbm noise as the texture coordinate to sample from a gradient texture to the the fireball a melting lava look. 
+What's more, I modifed the position according to time, and use the modified position as the input for the noise function. So, it looks like the fireball is rotating. 
+
+For the background, I used triangle wave to create the pattern. I multiplied the amplitude with a noise to make it less uniform and another noise to animate the amplitude as well.
+
+Link: https://vivienldy.github.io/hw01-fireball-base/
+
 ## Getting Started
 
 1. Fork and clone [this repository](https://github.com/CIS700-Procedural-Graphics/Project1-Noise).
